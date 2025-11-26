@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard Parqueadero</title>
+</head>
+
+<body style="margin:0; background:#f0f2f5; font-family:Arial;">
+
+<!-- NAVBAR -->
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<h2 style="text-align:center;">Estado de las Celdas</h2>
+
+<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:30px;">
+    <div th:each="celda : ${celdas}"
+         style="width:120px; height:120px; border-radius:10px; padding:20px; 
+                display:flex; justify-content:center; align-items:center; 
+                font-weight:bold; font-size:18px;
+                color:white; box-shadow:0 0 10px rgba(0,0,0,0.2);"
+
+         th:styleappend="${celda.ocupada} ? 'background:#d32f2f' : 'background:#388e3c'">
+
+        <span th:text="${celda.codigo}"></span>
+    </div>
+</div>
+
+</body>
+</html>

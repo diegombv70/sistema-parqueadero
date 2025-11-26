@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><meta charset="UTF-8"/><title>Celdas</title></head>
+<body>
+<div th:replace="fragments/header :: header"></div>
+<h1>Gestión de Celdas</h1>
+<form th:action="@{/celdas/crear}" method="post">
+Codigo: <input type="text" name="codigo"/> <button type="submit">Crear</button>
+</form>
+<table border="1">
+<tr><th>Codigo</th><th>Estado</th></tr>
+<tr th:each="c : ${celdas}">
+<td th:text="${c.codigo}"></td>
+<td th:text="${c.ocupada} ? 'Ocupada' : 'Disponible'"></td>
+</tr>
+</table>
+</body>
+</html>
