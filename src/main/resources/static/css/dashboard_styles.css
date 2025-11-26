@@ -1,0 +1,116 @@
+/* ======== ESTILOS GENERALES ======== */
+body {
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d; /* negro elegante */
+    font-family: "Arial", sans-serif;
+    color: #fff;
+}
+
+.main-content {
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #1a73e8; /* Azul principal */
+    margin-bottom: 25px;
+    text-shadow: 0 0 15px rgba(26, 115, 232, 0.7);
+}
+
+/* ======== WIDGETS SUPERIORES ======== */
+.info-widgets {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.widget {
+    padding: 20px 30px;
+    border-radius: 12px;
+    background: #111;
+    border: 2px solid #222;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    min-width: 260px;
+}
+
+.widget-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.widget-value {
+    margin-top: 10px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* COLORES ESPECIALES */
+.time-widget .widget-value {
+    color: #1a73e8; /* azul */
+}
+.count-widget .widget-value {
+    color: #e63946; /* rojo fuerte */
+}
+
+/* ======== CELDAS ======== */
+.section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+}
+
+.celdas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.celda-item {
+    padding: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #333;
+    transition: 0.25s;
+}
+
+/* ESTADO DE CELDAS */
+.celda-libre {
+    background: #002b5b; 
+    border-color: #1a73e8;
+    color: white;
+    box-shadow: 0 0 10px #1a73e8aa;
+}
+
+.celda-ocupada {
+    background: #5b0000;
+    border-color: #e63946;
+    color: white;
+    box-shadow: 0 0 10px #e63946aa;
+}
+
+/* HOVER EFFECT */
+.celda-item:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .widget-value { font-size: 28px; }
+    .widget-label { font-size: 16px; }
+}

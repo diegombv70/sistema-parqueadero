@@ -1,0 +1,132 @@
+/*
+ * Estilo para el Formulario de Entrada de Vehículos
+ * Paleta: Negro, Blanco, Azul (detalles), Rojo (acción)
+ */
+
+/* Estilos Generales y Fondo */
+body {
+    background-color: #1a1a1a; /* Negro Oscuro */
+    color: #ffffff; /* Blanco para texto principal */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #2c2c2c; /* Gris Oscuro/Negro secundario */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7); /* Sombra oscura */
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* Encabezado */
+.title {
+    color: #ffffff;
+    border-bottom: 2px solid #007bff; /* Línea azul de acento */
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* Caja de Fecha y Hora */
+.datetime-box {
+    background-color: #1f1f1f; /* Fondo muy oscuro */
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border-left: 5px solid #ff0000; /* Borde rojo llamativo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.datetime {
+    color: #007bff; /* Azul brillante */
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Estilos del Formulario */
+.parking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    color: #aaaaaa; /* Gris claro para las etiquetas */
+    font-weight: 600;
+}
+
+input[type="text"],
+select {
+    padding: 12px;
+    border: 2px solid #007bff; /* Borde azul moderno */
+    border-radius: 6px;
+    background-color: #3a3a3a; /* Fondo oscuro en los campos */
+    color: #ffffff;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Remover la apariencia por defecto en algunos navegadores */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #ff0000; /* Rojo intenso al enfocar */
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Estilo del Botón de Enviar */
+.submit-btn {
+    background-color: #ff0000; /* Rojo vibrante */
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #cc0000; /* Rojo más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Efecto 3D sutil */
+}
+
+/* Enlace de pie de página */
+footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444444; /* Separador */
+}
+
+.back-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: #ff0000; /* Rojo al pasar el ratón */
+}

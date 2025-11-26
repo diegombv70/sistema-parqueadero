@@ -1,13 +1,94 @@
-<form action="/vehiculos/entrada" method="post">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #0d0d0d; /* Negro elegante */
+        font-family: Arial, sans-serif;
+    }
 
-    <label>Placa:</label>
-    <input type="text" name="placa" required>
+    .form-container {
+        max-width: 420px;
+        width: 90%;
+        padding: 25px;
+        background: #111; /* Negro */
+        border-radius: 12px;
+        box-shadow: 0 0 22px rgba(26,115,232,0.4);
+        color: white;
+        position: relative;
+    }
 
-    <label>Tipo Vehículo:</label>
-    <select name="tipoVehiculo">
-        <option value="CARRO">Carro</option>
-        <option value="MOTO">Moto</option>
-    </select>
+    .form-container h2 {
+        text-align: center;
+        color: #1a73e8; /* Azul */
+        margin-bottom: 20px;
+    }
 
-    <button type="submit">Registrar Entrada</button>
-</form>
+    .form-container label {
+        display: block;
+        margin-top: 12px;
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .form-container input,
+    .form-container select {
+        width: 100%;
+        padding: 12px;
+        margin-top: 6px;
+        border: 2px solid #1a73e8;
+        border-radius: 8px;
+        background: #222;
+        color: white;
+        font-size: 15px;
+    }
+
+    .form-container input:focus,
+    .form-container select:focus {
+        outline: none;
+        border-color: #e91e63; /* Rojo */
+        box-shadow: 0 0 8px #e91e63;
+    }
+
+    .btn-submit {
+        width: 100%;
+        margin-top: 20px;
+        padding: 14px;
+        background: #1a73e8; /* Azul */
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        font-weight: bold;
+    }
+
+    .btn-submit:hover {
+        background: #e91e63; /* Rojo */
+        transform: scale(1.05);
+    }
+</style>
+
+<body>
+    <div class="form-container">
+        <div th:replace="~{fragments/navbar :: navbar}"></div>
+        <h2>Registrar Entrada</h2>
+
+        <form action="/vehiculos/entrada" method="post">
+            <label>Placa:</label>
+            <input type="text" name="placa" required>
+
+            <label>Tipo Vehículo:</label>
+            <select name="tipoVehiculo">
+                <option value="CARRO">Carro</option>
+                <option value="MOTO">Moto</option>
+            </select>
+
+            <button type="submit" class="btn-submit">Registrar Entrada</button>
+        </form>
+    </div>
+</body>

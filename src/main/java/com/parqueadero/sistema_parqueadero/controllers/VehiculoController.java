@@ -16,6 +16,11 @@ public class VehiculoController {
         this.vehiculoService = vehiculoService;
     }
 
+    @GetMapping
+    public String index() {
+        return "redirect:/vehiculos/listar";
+    }
+
     @GetMapping("/entrada")
     public String mostrarEntrada(Model model) {
         model.addAttribute("vehiculo", new Vehiculo());
@@ -23,10 +28,8 @@ public class VehiculoController {
     }
 
     @PostMapping("/entrada")
-    public String registrarEntrada(
-            @RequestParam String placa,
-            @RequestParam String tipoVehiculo
-    ) {
+    public String registrarEntrada(@RequestParam String placa,
+                                   @RequestParam String tipoVehiculo) {
         vehiculoService.registrarEntrada(placa, tipoVehiculo);
         return "redirect:/vehiculos/listar";
     }
