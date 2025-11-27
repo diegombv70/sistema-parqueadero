@@ -11,11 +11,14 @@ public class Usuario {
 
     private String username;
     private String password;
-    private String rol;
+
+    @ManyToOne
+    @JoinColumn(name = "rol_id")
+    private Rol rol;
 
     public Usuario() {}
 
-    public Usuario(String username, String password, String rol) {
+    public Usuario(String username, String password, Rol rol) {
         this.username = username;
         this.password = password;
         this.rol = rol;
@@ -30,6 +33,6 @@ public class Usuario {
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
 
-    public String getRol() { return rol; }
-    public void setRol(String rol) { this.rol = rol; }
+    public Rol getRol() { return rol; }
+    public void setRol(Rol rol) { this.rol = rol; }
 }
